@@ -8,6 +8,13 @@
 
 body {
   font-family: 'Hind Siliguri', sans-serif;
+  background: rgb(108, 90, 154);
+  background: linear-gradient(
+    247deg,
+    rgba(108, 90, 154, 1) 0%,
+    rgba(90, 137, 154, 1) 53%,
+    rgba(108, 90, 154, 1) 100%
+  );
 }
 h1 {
   margin-top: 10px;
@@ -17,16 +24,27 @@ h1 {
 p.lead {
   margin-top: 5px;
 }
-/* .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  width: 90%;
+input {
+  margin: 30px 0;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+input:hover,
+input:focus {
+  outline: none;
+}
+img {
+  padding-bottom: 60px;
+}
+.container-one {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
   margin: 0 auto;
-} */
+}
 .card-list {
-  width: 85vw;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
@@ -38,9 +56,11 @@ p.lead {
   background-color: #95dada;
   border: 1px solid grey;
   text-align: center;
-
+  width: 300px;
+  height: 400px;
   border-radius: 8px;
   padding: 25px;
+
   cursor: pointer;
   backface-visibility: hidden;
   transform: translateZ(0);
