@@ -69,3 +69,8 @@ img {
 .card-container:hover {
   transform: scale(1.05);
 }
+.title {
+  font-size: 60px;
+  border-bottom: 2px solid #a0f709;
+  color: #a0f709;
+}
