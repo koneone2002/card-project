@@ -9,19 +9,43 @@
 body {
   font-family: 'Hind Siliguri', sans-serif;
 }
-.container {
+h1 {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+p.lead {
+  margin-top: 5px;
+}
+/* .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   width: 90%;
   margin: 0 auto;
+} */
+.card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
+
 .card-container {
-  background-color: #ccc;
-  width: 400px;
-  height: 400px;
-  margin: 20px auto;
-  padding: 40px;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #95dada;
+  border: 1px solid grey;
   text-align: center;
+
+  border-radius: 8px;
+  padding: 25px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+.card-container:hover {
+  transform: scale(1.05);
 }

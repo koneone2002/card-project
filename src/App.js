@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MonsterItem from './MonsterItem';
+import CardList from './components/CardList';
 
 class App extends Component {
   state = {
@@ -14,10 +14,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
-        {this.state.monsters.map(monster => (
-          <MonsterItem key={monster.id} monster={monster} />
-        ))}
+      <div>
+        <CardList monsters={this.state.monsters} />
       </div>
     );
   }
