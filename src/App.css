@@ -10,8 +10,18 @@ body {
   font-family: 'Hind Siliguri', sans-serif;
 }
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.card-container {
+  background-color: #ccc;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
 }

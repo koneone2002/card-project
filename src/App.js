@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MonsterItem from './MonsterItem';
 
 class App extends Component {
   state = {
@@ -7,6 +8,7 @@ class App extends Component {
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
+
       .then(users => this.setState({ monsters: users }));
   }
 
@@ -14,7 +16,7 @@ class App extends Component {
     return (
       <div className='container'>
         {this.state.monsters.map(monster => (
-          <h1 key={monster.id}>{monster.name}</h1>
+          <MonsterItem key={monster.id} monster={monster} />
         ))}
       </div>
     );
